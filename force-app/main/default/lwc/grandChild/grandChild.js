@@ -1,12 +1,11 @@
 import { LightningElement, track, wire } from 'lwc';
-import getString from '@salesforce/apex/Demo.getString';
+import getOpportunity from '@salesforce/apex/Demo.getOpportunity';
 
 export default class GrandChild extends LightningElement {
     @track grandchild = 'GrandChild';
-    result
+    result;
 
-   
-    @wire(getString) stringtest;
+    @wire(getOpportunity) Opportunities;
     connectedCallback() {
         console.log('in grandchild');
     }

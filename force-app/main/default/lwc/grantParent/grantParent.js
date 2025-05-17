@@ -5,11 +5,12 @@ export default class GrantParent extends LightningElement {
     @wire(getAccount) accounts;
 
     connectedCallback() {
-        console.log('in grandParent');        
+        console.log('in grandParent');     
+        console.log('in grandParent' + JSON.stringify(this.accounts));      
     }
 
     renderedCallback() {
-        console.log('in grandparent renderedCallback');
+        console.log('in grandparent renderedCallback' + JSON.stringify(this.accounts));
     }
 
     

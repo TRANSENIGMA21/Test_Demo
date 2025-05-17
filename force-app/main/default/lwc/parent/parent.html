@@ -1,6 +1,15 @@
 <template>
     <div class="slds-box">
         <p>This is a regular-sized box.  {parent}</p>
+        <!-- <template if:true={contacts.data}>
+            <template for:each={contacts.data} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+
+        </template>
+        <template if:true={contacts.error}>
+            <p class="slds-text-color_error">Error: {contacts.error.message}</p>
+        </template> -->
     </div>
     <c-grand-child></c-grand-child>
     
