@@ -12,10 +12,11 @@ export default class GrandChild extends LightningElement {
 
     renderedCallback() {
         console.log('in grantchild renderedCallback');
-        if (this.accounts) {
-            console.log('in grant child' + JSON.stringify(this.accounts));
-        }
+       
+    }
 
+    errorCallback(error, stack){
+        console.log('in grandchild errorCallback');
     }
 }
 

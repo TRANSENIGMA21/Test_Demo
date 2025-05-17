@@ -12,4 +12,8 @@ export default class Parent extends LightningElement {
     renderedCallback() {
         console.log('in parent renderedCallback' + JSON.stringify(this.contacts));
     }
+
+    errorCallback(error, stack){
+        console.log('in parent errorCallback'+JSON.stringify(error));
+    }
 }

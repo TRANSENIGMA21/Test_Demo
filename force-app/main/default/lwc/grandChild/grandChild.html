@@ -6,7 +6,7 @@
                 <p key={opp.Id}>{opp.Name}</p>
             </template>
         </template>
-        <template if:true={Opportunities.error}>
+        <template if:true={con.error}>
             <p class="slds-text-color_error">Error: {Opportunities.error.message}</p>
         </template>
         
