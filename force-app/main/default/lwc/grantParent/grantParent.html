@@ -1,7 +1,16 @@
 <template>
     <div class="slds-box">
-        <p>This is a regular-sized box.  {grandParent}</p>
+        <p>This is a regular-sized box. {grandParent}</p>
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="account">
+                <p key={account.Id}>{account.Name}</p>
+            </template>
+        </template>
+        <template if:true={accounts.error}>
+            <p class="slds-text-color_error">Error: {accounts.error.message}</p>
+        </template>
     </div>
+
     <c-parent></c-parent>
-   
+
 </template>
